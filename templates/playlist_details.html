@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{ playlist_name }} - Playlist Details
+{% endblock %}
+
+{% block playlist_image %}<img src={{ playlist_image_url }} alt="Cover Art" width="200" height="200" class="img-fluid">{% endblock %}
+{% block playlist_name %}<p></p>{{ playlist_name }}{% endblock %}
+{% block playlist_description %}<br>{{ playlist_description | safe }}{% endblock %}
+{% block creator_and_total_tracks %}<br>Playlist by {{ playlist_creator }}&nbsp&nbsp&nbsp&nbsp•&nbsp&nbsp&nbsp&nbsp{{ total_tracks }} tracks{% endblock %}
+
+{% block main_text %}<br><br>{% endblock %}
+
+{% block main_table %}
+<tr>
+  <th class="sortable" data-sort-value="index">#</th>
+  <th class="sortable" data-sort-value="image_url">Image</th>
+  <th class="sortable" data-sort-value="name">Track Name</th>
+  <th class="sortable" data-sort-value="artists">Artist(s)</th>
+  <th class="sortable" data-sort-value="popularity">Popularity</th>
+  <th class="sortable" data-sort-value="tempo">BPM</th>
+  <th class="sortable" data-sort-value="valence">Positivity</th>
+  <th class="sortable" data-sort-value="danceability">Danceability</th>
+  <th class="sortable" data-sort-value="energy">Energy</th>
+  <th class="sortable" data-sort-value="acousticness">Acousticness</th>
+  <th class="sortable" data-sort-value="instrumentalness">Instrumentalness</th>
+  <th class="sortable" data-sort-value="liveness">Liveness</th>
+  <th class="sortable" data-sort-value="loudness">Loudness</th>
+  <th class="sortable" data-sort-value="speechiness">Speechiness</th>
+  <th class="sortable" data-sort-value="key">Key</th>
+  <th class="sortable" data-sort-value="mode">Mode</th>
+  <th class="sortable" data-sort-value="time_signature">Metre</th>
+  <th class="sortable" data-sort-value="duration_ms">Duration</th>
+</tr>
+
+{% for item in track_details %}
+<tr>
+  <td>{{ item.index }}</td>
+  <td><img src="{{ item.image_url }}" alt="Track Image" width="80" height="80"></td>
+  <td>{{ item.name }}</td>
+  <td>{{ item.artists | join(', ') }}</td>
+  <td>{{ item.popularity }}</td>
+  <td>{{ item.tempo }}</td>
+  <td>{{ item.valence }}</td>
+  <td>{{ item.danceability }}</td>
+  <td>{{ item.energy }}</td>
+  <td>{{ item.acousticness }}</td>
+  <td>{{ item.instrumentalness }}</td>
+  <td>{{ item.liveness }}</td>
+  <td>{{ item.loudness }}</td>
+  <td>{{ item.speechiness }}</td>
+  <td>{{ item.key | key_to_name}}</td>
+  <td>{{ item.mode | mode_to_name }}</td>
+  <td>{{ item.time_signature }}</td>
+  <td>{{ item.duration_ms | duration_format }}</td>
+</tr>
+{% endfor %}
+{% endblock %}

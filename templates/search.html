@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block main_text %}
+<h1>Spotify Playlist Search</h1>
+<br>
+
+<form action="/search" method="post">
+  <div class="mb-3">
+    <input autofocus class="form-control mx-auto w-auto" id="playlist_name" name="playlist_name" placeholder="Playlist Name" type="text" required>
+  </div>
+  <br>
+  <button class="btn btn-success" type="submit">Search</button>
+</form>
+<br><br>
+
+<div class="main-container">
+  <p>Why not explore some of the hottest playlists around?</p>
+  <p>To get started, enter the name of a public playlist like 'Today's Top Hits' or personalised playlist like 'Discover Weekly'.</p>
+</div>
+{% endblock %}

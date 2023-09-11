@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+FAQs
+{% endblock %}
+
+{% block main_text %}
+<h1>FAQs</h1>
+<br>
+<div class="main-container">
+<div class="faq">
+  <div class="question">What do the table headings mean?</div>
+  <div class="answer">The heading refer to the audio features of each track in each playlist, computed by Spotify. The averages are calculated from the features of each track in the playlist. Learn more in the 'About' tab.</div>
+</div>
+<div class="faq">
+  <div class="question">The time signature/key is wrong.</div>
+  <div class="answer">The features are extracted from the song's raw audio, and sometimes technical details like time signatures or key may be incorrectly analysed. Learn more about limitations in the 'About' tab.</div>
+</div>
+<div class="faq">
+  <div class="question">A track's popularity value seems abnormally low.</div>
+  <div class="answer">Duplicate tracks (e.g. the same track from a single and an album) are rated independently, so the version in your playlist may be one rarely listened to compared to other versions.</div>
+</div>
+<div class="faq">
+  <div class="question">Where are the rest of my playlists?</div>
+  <div class="answer">If you have over 50 playlists, the homepage only displays your 50 most recently created.</div>
+</div>
+<div class="faq">
+  <div class="question">What if my playlist contains podcast episodes or local tracks?</div>
+  <div class="answer">The metrics do not account for these. Playlists that contain either of these items will display incorrect average features, and will be ignored when viewing the track details.</div>
+</div>
+<div class="faq">
+  <div class="question">The average audio features of my very large playlist seem incorrect.</div>
+  <div class="answer">The average features of playlists displayed on the homepage only use data from the first 100 tracks of each playlist.</div>
+</div>
+<div class="faq">
+  <div class="question">Why have some track numbers been skipped?</div>
+  <div class="answer">This happens as there originally was a track in the skipped position, but the artist of that track has since deleted it or made it hidden.</div>
+</div>
+{% endblock %}

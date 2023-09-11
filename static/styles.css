@@ -1,0 +1,60 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+th:hover {
+    background-color: #B4C8BB;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    word-wrap: break-word;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.faq {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.question {
+    font-weight: bold;
+}
+.table-container {
+    overflow-x: auto;
+   /* Enable horizontal scrolling */
+    max-width: 100%;
+   /* Ensure the container expands as needed */
+}
+.horizontal-table {
+    border-collapse: collapse;
+    width: 100%;
+   /* Set the table width to 100% */
+    white-space: nowrap;
+   /* Prevent table cell contents from wrapping */
+}
+.horizontal-table th, .horizontal-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}

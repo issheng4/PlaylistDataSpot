@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Your Playlists
+{% endblock %}
+
+{% block main_text %}
+<h1>Your Playlists</h1>
+<p></p>
+
+<p style="margin-right:10%;margin-left:10%">Click a playlist name for individual track insights&nbsp&nbsp&nbsp•&nbsp&nbsp&nbspSort by clicking a table heading&nbsp&nbsp&nbsp•&nbsp&nbsp&nbspUncover data meanings in the 'About' page</p>
+<br><br>
+{% endblock %}
+
+{% block main_table %}
+<tr>
+  <th class="sortable" data-sort-value="index">#</th>
+  <th class="sortable" data-sort-value="image_url">Image</th>
+  <th class="sortable" data-sort-value="name"> Playlist Name</th>
+  <th class="sortable" data-sort-value="total_tracks">Total Tracks</th>
+  <th class="sortable" data-sort-value="visibility">Public/Private</th>
+  <th class="sortable" data-sort-value="popularity">Average Popularity</th>
+  <th class="sortable" data-sort-value="tempo">Average BPM</th>
+  <th class="sortable" data-sort-value="valence">Average Positivity</th>
+  {% for feature in ['danceability', 'energy', 'acousticness', 'instrumentalness', 'liveness', 'loudness', 'speechiness'] %}
+    <th class="sortable" data-sort-value="{{ feature }}">Average {{ feature|capitalize }}</th>
+  {% endfor %}
+  <th class="sortable" data-sort-value="mode">Major:Minor Ratio</th>
+  <th class="sortable" data-sort-value="time_signature">Average Metre</th>
+  <th class="sortable" data-sort-value="duration_ms">Average Duration</th>
+</tr>
+
+{% for item in playlist_details %}
+<tr>
+  <td >{{ item.index }}</td>
+  <td><img src="{{ item.image_url }}" alt="Playlist Image" width="80" height="80"></td>
+  {% if item.total_tracks == 0 %}
+    <td>{{ item.name }}</td>
+  {% else %}
+    <td><a href="{{ url_for('get_playlist_details', playlist_id=item.playlist_id) }}">{{ item.name }}</a></td>
+  {% endif %}
+  <td>{{ item.total_tracks }}</td>
+  <td>{{ item.visibility }}</td>
+  {% for feature in ['popularity', 'tempo', 'valence', 'danceability', 'energy', 'acousticness', 'instrumentalness', 'liveness', 'loudness', 'speechiness'] %}
+  <td>
+    {% if item[feature] is number %}
+      {{ "%0.3f"|format(item[feature] | round(3)) }}
+    {% else %}
+      {{ item[feature] }}
+    {% endif %}
+  </td>
+  {% endfor %}
+  {% if item.total_tracks == 0 %}
+    <td>-99.999</td>
+  {% else %}
+    <td>{{ "%0.3f"|format(item['mode'] | round(3)) }} : {{ "%0.3f"|format(1.0 - item['mode'] | round(3)) }}</td>
+  {% endif %}
+    <td>{{ "%0.3f"|format(item.time_signature) }}</td>
+  {% if item.total_tracks == 0 %}
+    <td>-99.999</td>
+  {% else %}
+    <td>{{ item.duration_ms | duration_format }}</td>
+  {% endif %}
+</tr>
+{% endfor %}
+{% endblock %}

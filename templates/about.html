@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block main_text %}
+<h1>About</h1>
+<div class="main-container" style="text-align: left;">
+  <br>
+  <p>
+    PlaylistDataSpot is the one-stop spot for music enthusiasts and data-savvy listeners alike.
+  </p>
+  <p>
+    Seamlessly integrating with Spotify, the world's leading music streaming platform, PlaylistDataSpot provides a comprehensive toolkit for users to delve into the sonic intricacies of their favourite tracks. This app showcases your playlists in a neat, intuitive table, with the audio features of each track, computed by Spotify's algorithms. You have the flexibility to sort the tables based on each feature, enabling easy exploration and analysis.
+  </p>
+  <p>
+    DJs and music producers will discover its utility in quickly identifying song keys and BPM, essential for crafting flawless mixes and seamless transitions during performances. For playlist curators, the app displays tracks' current popularity and offers a comprehensive breakdown of audio features, aiding in the creation of captivating playlists that resonate with specific moods or themes. Software developers interested in audio analysis programming will also benefit from using PlaylistDataSpot to learn about the workings of Spotify's audio analysis algorithm (see 'Considerations and Limitations' below). Aspiring musicians and composers can leverage the app's insights to study the sonic characteristics of different tracks, gaining inspiration and technical knowledge for their own creations.
+  </p>
+  <p>
+    The unique feature that enables users to search for public playlists and access a detailed overview of their track features simplifies music exploration and fosters a deeper understanding of the songs that resonate with them.
+  </p>
+  <br>
+
+  <h2>
+    Understanding Spotify's Audio Features
+  </h2>
+  <p></p>
+  <p>
+    Spotify's audio features are a set of quantitative measurements designed to encapsulate various musical characteristics within a song. These features are extracted from the song's audio signal and are used to describe different aspects of its sound. The audio features help both listeners and data-driven applications understand and categorise the music based on its sonic properties.
+  </p>
+  <p>
+    Spotify derives these audio features using advanced algorithms that analyse the raw audio data of songs. The values are calculated using signal processing techniques that analyse elements such as frequency, amplitude, rhythm, and spectral content. This data is then aggregated and standardised to provide consistent feature values across all tracks.
+  </p>
+  <p>
+    These audio features are particularly useful for playlist recommendations, music discovery, and creating personalised listening experiences for users. They enable Spotify's algorithms to group similar songs, suggest tracks based on user preferences, and create mood-based playlists.
+  </p>
+  <br>
+
+  <h2>
+    The Features
+  </h2>
+  <p></p>
+  <ul>
+    <li>
+      <b>Popularity:</b> Value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is mostly based on the total number of plays the track has had and how recent those plays are. Songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past.
+    </li>
+    <li>
+      <b>BPM (or Tempo):</b> Denotes the song's tempo, measured in beats per minute (BPM).
+    </li>
+    <li>
+      <b>Positivity (or Valence):</b> A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+    </li>
+    <li>
+      <b>Danceability:</b> Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
+    </li>
+    <li>
+      <b>Energy:</b> Quantifies the song's perceptual level of intensity and liveliness from 0.0 to 1.0, determined by parameters such as loudness, dynamic range, timbre, onset rate, and general entropy.
+    </li>
+    <li>
+      <b>Acousticness:</b> Measures from 0.0 to 1.0 the extent to which a song features acoustic sounds versus electronic elements. 1.0 represents high confidence the track is acoustic.
+    </li>
+    <li>
+      <b>Instrumentalness:</b> Evaluates the likelihood of a song being instrumental rather than containing vocal elements. 'Ooh' and 'aah' sounds are treated as instrumental in this context. Measured from 0.0 to 1.0, higher instrumentalness values indicate a greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks.
+    </li>
+    <li>
+      <b>Liveness:</b> Detects the presence of a live audience during the recording. Measured from 0.0 to 1.0, higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+    </li>
+    <li>
+      <b>Loudness:</b> The overall 'loudness' of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Values typically range between -60 and 0 dB.
+    </li>
+    <li>
+      <b>Speechiness:</b> Detects the presence of spoken words in a track. Measured from 0.0 to 1.0, with higher values indicating a greater degree of spoken content. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.
+    </li>
+    <li>
+      <b>Key and Mode (Major/Minor):</b> Specifies the musical key and modality (major or minor) of the song.
+    </li>
+    <li>
+      <b>Metre (or Time Signature):</b> The metre is a notational convention to specify how many beats are in each bar (or measure).
+    </li>
+  </ul>
+  <br>
+
+  <h2>
+    Considerations and Limitations
+  </h2>
+  <p></p>
+  <p>
+    While Spotify's audio features offer valuable insights into the songs within their vast music library, it is important to note that these features also come with certain limitations and potential drawbacks. One notable limitation is the possibility of wrong information being associated with tracks. Technical details like time signatures or whether a track has a vocalist are sometimes incorrectly analysed from the raw audio, leading to incorrect classification. To demonstrate, misclassification from the audio analysis algorithm can be found when you head to the 'Search' page and look up 'classical waltzes'. The metre of each track should be 3, yet many of the tracks are classified as 4. Furthermore, many of these tracks have their key signature in their title, yet the algorithm detects and displays a different key. PlaylistDataSpot is an insight into Spotify's audio analysis algorithm, allowing further exploration into how it works from the misanalysed tracks.
+  </p>
+  <p>
+    Subjective elements like 'positivity' being quantified into numerical values can raise concerns. For many, music is inherently emotional and can evoke a wide range of feelings in listeners. Attempting to distil emotions like positivity or danceability into objective data points may oversimplify the intricate emotional nuances conveyed by the music, leading to misinterpretation.
+  </p>
+  <p>
+    The practice of shoehorning music into specific categorical boxes presents another significant concern. Many compositions, for example, those from diverse cultural backgrounds, defy such tidy categorisations. For instance, the ragas of Indian classical music do not follow the Western notions of key signature, and the polyrhythmic complexities of African drumming traditions challenge the simplistic quantification of a uniform tempo and time signature. In an attempt to quantify these complex musical elements, the richness and significance of these cultural expressions can become diluted.
+  </p>
+  <p>
+    It is important to approach these audio features with an understanding that while they can offer valuable insights into certain aspects of a song, they should not be seen as definitive representations of its entire musical essence. Recognising these technical and cultural limitations allows us to appreciate the data-driven exploration of music while remaining mindful of the multifaceted nature of the art.
+  </p>
+</div>
+{% endblock %}
