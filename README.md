@@ -28,7 +28,7 @@ PlaylistDataSpot is a powerful tool for Spotify users, designed to provide detai
 
 - **User-Friendly Interface:** A user-friendly interface makes it simple to navigate and enjoy the app's features.
 
-- **Neat track detail list of dictionaries:** For developers, all the track details are neatly packed into a list of dictionaries. This app displays them in HTML templates, but you can use them for further development.
+- **Neat track-detail list of dictionaries:** For developers, all the track details are neatly packed into a list of dictionaries. This app displays them in HTML templates, but you can use them for further development.
 
 
 ## Getting Started
