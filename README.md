@@ -140,4 +140,4 @@ Contributions from the community to improve PlaylistDataSpot are welcome and app
 
 ## Support and Feedback
 
-For questions, feedback, or support, please contact me at willissheng4@gmail.com.
+For questions, feedback, or support, please contact me at wemeryy@outlook.com.
