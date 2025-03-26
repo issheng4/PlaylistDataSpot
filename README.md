@@ -2,7 +2,7 @@
 
 #### Video Demo: https://youtu.be/BGrnnscAJKU
 
-PlaylistDataSpot is a powerful tool for Spotify users, designed to provide detailed insights into the music within their playlists. With this app, you can explore the metadata and audio characteristics of each track in your Spotify playlists and even discover what's inside public playlists found through the app's search function.
+PlaylistDataSpot is a tool designed to provide Spotify users with detailed insights into the music within their playlists. With this app, you can explore the metadata and audio characteristics of each track in your Spotify playlists and even discover what's inside public playlists found through the app's search function.
 
 
 ## Contents
@@ -11,7 +11,6 @@ PlaylistDataSpot is a powerful tool for Spotify users, designed to provide detai
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [Support and Feedback](#support-and-feedback)
 
 
 ## Features
@@ -108,9 +107,9 @@ You should now be able to use the PlaylistDataSpot app!
 ### Common Usage Patterns
 Here are some common usage patterns:
 - DJs and music producers can use the app to identify song keys and BPM for seamless mixes.
-- Playlist curators can create captivating playlists based on track popularity and audio features, and learn about their current playlists.
-- Software developers interested in audio analysis programming and music can decipher Spotify's audio analysis algorithm from its musical misanalysis.
-- Aspiring musicians and composers can study audio characteristics for inspiration.
+- Playlist curators can create playlists based on track popularity and audio features, and learn about their current playlists.
+- Software developers interested in audio analysis programming and music can learn about Spotify's audio analysis algorithm from its musical misanalysis.
+- Curious listeners can learn more about their tastes.
 
 
 ## Project Structure
@@ -136,8 +135,3 @@ Contributions from the community to improve PlaylistDataSpot are welcome and app
 4. **Commit and Push**: Commit your changes with clear, descriptive messages and push to your fork.
 
 6. **Open a Pull Request**: Go back to the original GitHub repository and click the 'New Pull Request' button. Describe your changes and submit the pull request for review.
-
-
-## Support and Feedback
-
-For questions, feedback, or support, please contact me at wemeryy@outlook.com.
