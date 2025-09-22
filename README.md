@@ -1,16 +1,21 @@
 # PlaylistDataSpot
 
-#### Video Demo: https://youtu.be/BGrnnscAJKU
-
 PlaylistDataSpot is a tool designed to provide Spotify users with detailed insights into the music within their playlists. With this app, you can explore the metadata and audio characteristics of each track in your Spotify playlists and even discover what's inside public playlists found through the app's search function.
 
 
 ## Contents
+- [Video Demo](#video-demo)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
+
+
+## Video Demo
+https://youtu.be/BGrnnscAJKU
+
+[![Watch the video demo](https://img.youtube.com/vi/BGrnnscAJKU/0.jpg)](https://youtu.be/BGrnnscAJKU)
 
 
 ## Features
@@ -124,14 +129,4 @@ Here are some common usage patterns:
 
 ## Contributing
 
-Contributions from the community to improve PlaylistDataSpot are welcome and appreciated! See the FAQs section in `user_guide.md` for current known issues that could be fixed. Here's how you can contribute:
-
-1. **Fork the Repository**: Create a copy of the repository in your GitHub account by clicking 'Fork'.
-
-2. **Create a New Branch**: Make a new branch in your forked repository for the specific changes or feature you want to work on.
-
-3. **Make Changes**: Implement your desired changes or add new features to your branch.
-
-4. **Commit and Push**: Commit your changes with clear, descriptive messages and push to your fork.
-
-6. **Open a Pull Request**: Go back to the original GitHub repository and click the 'New Pull Request' button. Describe your changes and submit the pull request for review.
+Contributions from the community to improve PlaylistDataSpot are welcome and appreciated! See the FAQs section in `user_guide.md` for current known issues that could be fixed.
