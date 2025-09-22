@@ -41,9 +41,11 @@ https://youtu.be/BGrnnscAJKU
 
 1. Clone this repository to your local machine using Git. Open your IDE or terminal and run the following command:
 
-   ```git clone https://github.com/issheng4/playlist-data-spot.git```
+   ```
+   git clone https://github.com/issheng4/playlist-data-spot.git
+   ```
 
-2. Ensure you have the following dependencies installed:
+3. Ensure you have the following dependencies installed:
 
     - [Python](https://www.python.org/downloads/) (version 3.7 or higher)
     - [Flask](https://pypi.org/project/Flask/)
@@ -53,7 +55,9 @@ https://youtu.be/BGrnnscAJKU
 
     You can install these dependencies using `pip`:
 
-    ```pip install Flask Flask-Session spotipy python-dotenv```
+    ```
+    pip install Flask Flask-Session spotipy python-dotenv
+    ```
 
 ### Setting Up Your Spotify Developer App
 
@@ -94,9 +98,11 @@ https://youtu.be/BGrnnscAJKU
 
 1. **Run the app:** In your terminal, run the Flask app:
 
-    ```flask run```
+    ```
+    flask run
+    ```
 
-2. **Access the app:** Head to the server via the link displayed in your terminal. Note: it gives a warning that this is a development server. At this stage, only those who clone this code can run the app.
+3. **Access the app:** Head to the server via the link displayed in your terminal. Note: it gives a warning that this is a development server. At this stage, only those who clone this code can run the app.
 
 You should now be able to use the PlaylistDataSpot app!
 
